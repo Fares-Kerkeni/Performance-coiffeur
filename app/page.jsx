@@ -185,18 +185,9 @@ export default function Home() {
               <p>90€</p>
             </div>
           </div>
-          <div className={style.title_price}>
-            <div className={style.title}>
-              <p>Shapoo and cut </p>
-              <p>Quaestione igitur per multiplices dilatata fortunas </p>
-            </div>
-            <div className={style.price}>
-              <p>90€</p>
-            </div>
-          </div>
         </div>
       </div>
-      <div className={style.container_contact}>
+      <div className={style.container_contacts}>
         <div className={style.nav}>
           <Nav page="contact" />
         </div>
@@ -205,6 +196,38 @@ export default function Home() {
         </div>
         <div className={style.moustache}>
           <Image src={moustache} alt="Moustache" width={100} height={100} />
+        </div>
+        <div className={style.contact_form}>
+          <div className={style.form}>
+            <div className={style.all_input}>
+              <p>Quaestione igitur per multiplices dilatata fortunas </p>
+              <input type="text" placeholder="Nom" />
+              <input type="email" placeholder="mail" />
+              <input type="text" placeholder="message" />
+
+              <a href="#" className={style.button}>
+                ENVOYER
+              </a>
+            </div>
+          </div>
+          <div className={style.contact}>
+            <div className={style.all}>
+              <div className={style.adresse}>
+                <p>Adresse</p>
+                <p>30 Rue Berlioz</p>
+                <p>91240</p>
+                <p>Saint-Michel-sur-Orge</p>
+              </div>
+              <div className={style.numero}>
+                <p>Numero de telephone</p>
+                <p>+33641388123</p>
+              </div>
+              <div className={style.horraire}>
+                <p>Horraires</p>
+                <p>7J /7</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
