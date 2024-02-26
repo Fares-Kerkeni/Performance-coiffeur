@@ -7,6 +7,9 @@ import ciseau from "./assets/ciseau.svg";
 import brosse from "./assets/brosse.svg";
 import lame from "./assets/lame.svg";
 import cont from "./assets/cont.svg";
+import inte from "./assets/inte.jpeg";
+import dv from "./assets/dv.jpeg";
+
 export default function Home() {
   return (
     <>
@@ -75,8 +78,12 @@ export default function Home() {
               </p>
             </div>
             <div className={style.image}>
-              <div className={style.image_1}></div>
-              <div className={style.image_1}></div>
+              <div className={style.image_1}>
+                <Image src={inte} />
+              </div>
+              <div className={style.image_2}>
+                <Image src={dv} />
+              </div>
             </div>
           </div>
         </div>
