@@ -9,20 +9,23 @@
     height: 100%;
     width: 100px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .moustache {
+  .navpc {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    img {
-      width: 100px;
-      height: 50px;
+    align-items: center;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    z-index: 100000000;
+    a {
+      margin: 0 25px;
     }
   }
   .container_man {
@@ -95,7 +98,7 @@
   height: 100vh;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   .nav {
     position: absolute;
@@ -103,7 +106,7 @@
     height: 100%;
     width: 100px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -138,7 +141,7 @@
     align-items: flex-end;
   }
   .contenus {
-    width: calc(100% - 200px);
+    width: calc(100% - 100px);
     height: calc(100% - 50px);
     display: flex;
     justify-content: center;
@@ -169,7 +172,6 @@
         align-items: center;
 
         .image_1 {
-          border: solid 1px #000000;
           margin-right: 25px;
         }
         .image_1 {
@@ -214,7 +216,7 @@
     height: 100%;
     width: 100px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -249,7 +251,7 @@
     align-items: flex-end;
   }
   .image_service {
-    width: calc(100% - 200px);
+    width: calc(100% - 100px);
     height: calc(100% - 50px);
 
     display: flex;
@@ -279,7 +281,7 @@
         }
       }
     }
-    .service {
+    .services {
       width: 50%;
 
       height: 320.97px;
@@ -289,7 +291,7 @@
         margin-bottom: 5px;
       }
       hr {
-        width: 600px;
+        width: 60%;
         border: solid 1px #000000;
         margin-bottom: 15px;
       }
@@ -309,7 +311,7 @@
     height: 100%;
     width: 100px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -392,7 +394,7 @@
     height: 100%;
     width: 100px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -526,7 +528,7 @@
     .nav {
       display: none;
     }
-    .moustache {
+    .navpc {
       display: none;
     }
     .container_man {
@@ -666,6 +668,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
     .nav {
       display: none;
     }
@@ -695,8 +698,7 @@
       height: calc(100% - 50px);
 
       display: flex;
-      justify-content: center;
-      align-items: center;
+
       flex-direction: column;
       .image {
         width: 100%;
@@ -732,21 +734,23 @@
           }
         }
       }
-      .service {
+      .services {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
         width: 294px;
-        p {
-          font-size: 16px;
-          font-weight: bold;
-          margin-bottom: 5px;
-        }
-        hr {
-          width: 200px;
-          border: solid 1px #000000;
-          margin-bottom: 15px;
+        .service {
+          p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          hr {
+            width: 200px;
+            border: solid 1px #000000;
+            margin-bottom: 15px;
+          }
         }
       }
     }

@@ -9,16 +9,20 @@ import lame from "./assets/lame.svg";
 import cont from "./assets/cont.svg";
 import inte from "./assets/inte.jpeg";
 import dv from "./assets/dv.jpeg";
-
+import Nav_mobile from "./components/nav/nav_mobile/Nav";
 export default function Home() {
   return (
     <>
+      <Nav_mobile />
       <div className={style.container_header}>
         <div className={style.nav}>
           <Nav page="header" />
         </div>
-        <div className={style.moustache}>
-          <Image src={moustache} alt="Moustache" width={100} height={100} />
+        <div className={style.navpc}>
+          <a href="#propo">A prpos</a>
+          <a href="#nosservices">Nos services</a>
+          <a href="#nosprix">Nos prix</a>
+          <a href="#contact">Contact</a>
         </div>
         <div className={style.container_man}>
           <Image src={man} alt="Moustache" />
@@ -46,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={style.container_propo}>
+      <div className={style.container_propo} id="propo">
         <div className={style.nav}>
           <Nav page="a_propos" />
         </div>
@@ -88,7 +92,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={style.container_services}>
+      <div className={style.container_services} id="nosservices">
         <div className={style.nav}>
           <Nav page="service" />
         </div>
@@ -109,25 +113,27 @@ export default function Home() {
               <Image src={brosse} alt="Brosse" />
             </div>
           </div>
-          <div className={style.service}>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
-            <p>Shapoo and cut</p>
-            <hr className={style.ligne}></hr>
+          <div className={style.services}>
+            <div className={style.service}>
+              <p>Shapoo and cut</p>
+              <hr className={style.ligne}></hr>
+            </div>
+            <div className={style.service}>
+              <p>Shapoo and cut</p>
+              <hr className={style.ligne}></hr>
+            </div>
+            <div className={style.service}>
+              <p>Shapoo and cut</p>
+              <hr className={style.ligne}></hr>
+            </div>
+            <div className={style.service}>
+              <p>Shapoo and cut</p>
+              <hr className={style.ligne}></hr>
+            </div>
           </div>
         </div>
       </div>
-      <div className={style.container_prix}>
+      <div className={style.container_prix} id="nosprix">
         <div className={style.nav}>
           <Nav page="prix" />
         </div>
@@ -194,7 +200,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={style.container_contacts}>
+      <div className={style.container_contacts} id="contact">
         <div className={style.nav}>
           <Nav page="contact" />
         </div>
