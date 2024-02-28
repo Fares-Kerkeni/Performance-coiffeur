@@ -236,8 +236,8 @@ export default function Home() {
                 <p data-aos="fade-up">+33641388123</p>
               </div>
               <div className={style.horraire}>
-                <p data-aos="fade-up">Horraires</p>
-                <p data-aos="fade-up">7J /7</p>
+                <p>Horraires</p>
+                <p>7J /7</p>
               </div>
             </div>
           </div>
