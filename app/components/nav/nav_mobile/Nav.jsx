@@ -1,9 +1,9 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import style from "./nav.module.scss";
 import Hamburger from "hamburger-react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -25,6 +25,10 @@ const Nav = () => {
     setOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
   return (
     <nav>
       <div className={style.hamburger}>
@@ -35,10 +39,18 @@ const Nav = () => {
           <Hamburger toggled={isOpen} toggle={toggleMenu} />
         </div>
         <div className={style.container_links}>
-          <a href="#propo">A prpos</a>
-          <a href="#nosservices">Nos services</a>
-          <a href="#nosprix">Nos prix</a>
-          <a href="#contact">Contact</a>
+          <a href="#propo" onClick={closeMenu}>
+            A propos
+          </a>
+          <a href="#nosservices" onClick={closeMenu}>
+            Nos services
+          </a>
+          <a href="#nosprix" onClick={closeMenu}>
+            Nos prix
+          </a>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
         </div>
       </div>
     </nav>
