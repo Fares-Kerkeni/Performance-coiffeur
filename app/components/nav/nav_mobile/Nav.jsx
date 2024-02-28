@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 import style from "./nav.module.scss";
 import Hamburger from "hamburger-react";
-
+import "aos/dist/aos.css";
+import AOS from "aos";
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -14,7 +15,7 @@ const Nav = () => {
       body.style.overflow = "auto";
     }
 
-    // Nettoyage lors de la désactivation du composant
+    // Clean up when the component is unmounted
     return () => {
       body.style.overflow = "auto";
     };
@@ -29,9 +30,8 @@ const Nav = () => {
       <div className={style.hamburger}>
         <Hamburger toggled={isOpen} toggle={toggleMenu} />
       </div>
-      <div className={isOpen ? `${style.show}` : style.links}>
-        {/* Utilisez une condition ternaire pour inclure la classe `style.show` si isOpen est vrai */}
-        <Hamburger toggled={isOpen} toggle={toggleMenu} />
+      <div className={isOpen ? `${style.show}` : ""}>
+        {isOpen && <Hamburger toggled={isOpen} toggle={toggleMenu} />}
       </div>
     </nav>
   );

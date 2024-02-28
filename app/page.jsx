@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import style from "./page.module.scss";
 import moustache from "./assets/moustache.svg";
@@ -10,7 +11,15 @@ import cont from "./assets/cont.svg";
 import inte from "./assets/inte.jpeg";
 import dv from "./assets/dv.jpeg";
 import Nav_mobile from "./components/nav/nav_mobile/Nav";
+import mouve_down from "./assets/move_down.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className={style.alllll}>
       <Nav_mobile />
@@ -28,25 +37,14 @@ export default function Home() {
           <Image src={man} alt="Moustache" />
           <div className={style.container_title}>
             <div className={style.title}>PERFORMANCE COIFFEUR</div>
-            <a href="#" className={style.button}>
-              PLUS
+            <a href="#contact" className={style.button}>
+              contactez-nous
             </a>
           </div>
           <div className={style.container_infos}>
-            <div className={style.container_info}>
-              <p>Adresse</p>
-              <p>30 Rue Berlioz</p>
-              <p>91240</p>
-              <p>Saint-Michel-sur-Orge</p>
-            </div>
-            <div className={style.container_info}>
-              <p>Numero de telephone</p>
-              <p>+33641388123</p>
-            </div>
-            <div className={style.container_info}>
-              <p>Horraires</p>
-              <p>7J /7</p>
-            </div>
+            <a href="#propo">
+              <Image src={mouve_down} alt="Moustache" />
+            </a>
           </div>
         </div>
       </div>
@@ -63,11 +61,11 @@ export default function Home() {
         <div className={style.contenus}>
           <div className={style.contenu}>
             <div className={style.text}>
-              <p>
+              <p data-aos="fade-up">
                 {`Découvrez l'excellence en matière de coiffure avec Performance
                 Coiffeur`}
               </p>
-              <p>
+              <p data-aos="fade-up">
                 {`
                 Notre équipe de coiffeurs passionnés allie expertise et
                 créativité pour vous offrir des résultats exceptionnels à chaque
@@ -82,10 +80,10 @@ export default function Home() {
               </p>
             </div>
             <div className={style.image}>
-              <div className={style.image_1}>
+              <div className={style.image_1} data-aos="fade-up">
                 <Image src={inte} />
               </div>
-              <div className={style.image_2}>
+              <div className={style.image_2} data-aos="fade-up">
                 <Image src={dv} />
               </div>
             </div>
@@ -97,36 +95,36 @@ export default function Home() {
           <Nav page="service" />
         </div>
         <div className={style.container_title}>
-          <p>NOS SERVICES</p>
+          <p>NOS SERVICES </p>
         </div>
         <div className={style.moustache}>
           <Image src={moustache} alt="Moustache" width={100} height={100} />
         </div>
         <div className={style.image_service}>
           <div className={style.image}>
-            <div className={style.image_1}>
+            <div className={style.image_1} data-aos="fade-up">
               <Image src={lame} alt="Lame" />
               <Image src={ciseau} alt="Ciseau" />
             </div>
-            <div className={style.image_2}>
+            <div className={style.image_2} data-aos="fade-up">
               <Image src={cont} alt="Cont" />
               <Image src={brosse} alt="Brosse" />
             </div>
           </div>
           <div className={style.services}>
-            <div className={style.service}>
+            <div className={style.service} data-aos="fade-up">
               <p>Shapoo and cut</p>
               <hr className={style.ligne}></hr>
             </div>
-            <div className={style.service}>
+            <div className={style.service} data-aos="fade-up">
               <p>Shapoo and cut</p>
               <hr className={style.ligne}></hr>
             </div>
-            <div className={style.service}>
+            <div className={style.service} data-aos="fade-up">
               <p>Shapoo and cut</p>
               <hr className={style.ligne}></hr>
             </div>
-            <div className={style.service}>
+            <div className={style.service} data-aos="fade-up">
               <p>Shapoo and cut</p>
               <hr className={style.ligne}></hr>
             </div>
@@ -144,7 +142,7 @@ export default function Home() {
           <Image src={moustache} alt="Moustache" width={100} height={100} />
         </div>
         <div className={style.prix}>
-          <div className={style.title_price}>
+          <div className={style.title_price} data-aos="fade-up">
             <div className={style.title}>
               <p>Shapoo and cut </p>
               <p>Quaestione igitur per multiplices dilatata fortunas </p>
@@ -153,7 +151,7 @@ export default function Home() {
               <p>90€</p>
             </div>
           </div>
-          <div className={style.title_price}>
+          <div className={style.title_price} data-aos="fade-up">
             <div className={style.title}>
               <p>Shapoo and cut </p>
               <p>Quaestione igitur per multiplices dilatata fortunas </p>
@@ -162,7 +160,7 @@ export default function Home() {
               <p>90€</p>
             </div>
           </div>
-          <div className={style.title_price}>
+          <div className={style.title_price} data-aos="fade-up">
             <div className={style.title}>
               <p>Shapoo and cut </p>
               <p>Quaestione igitur per multiplices dilatata fortunas </p>
@@ -171,7 +169,7 @@ export default function Home() {
               <p>90€</p>
             </div>
           </div>
-          <div className={style.title_price}>
+          <div className={style.title_price} data-aos="fade-up">
             <div className={style.title}>
               <p>Shapoo and cut </p>
               <p>Quaestione igitur per multiplices dilatata fortunas </p>
@@ -180,7 +178,7 @@ export default function Home() {
               <p>90€</p>
             </div>
           </div>
-          <div className={style.title_price}>
+          <div className={style.title_price} data-aos="fade-up">
             <div className={style.title}>
               <p>Shapoo and cut </p>
               <p>Quaestione igitur per multiplices dilatata fortunas </p>
@@ -189,7 +187,7 @@ export default function Home() {
               <p>90€</p>
             </div>
           </div>
-          <div className={style.title_price}>
+          <div className={style.title_price} data-aos="fade-up">
             <div className={style.title}>
               <p>Shapoo and cut </p>
               <p>Quaestione igitur per multiplices dilatata fortunas </p>
@@ -213,12 +211,14 @@ export default function Home() {
         <div className={style.contact_form}>
           <div className={style.form}>
             <div className={style.all_input}>
-              <p>Quaestione igitur per multiplices dilatata fortunas </p>
-              <input type="text" placeholder="Nom" />
-              <input type="email" placeholder="mail" />
-              <input type="text" placeholder="message" />
+              <p data-aos="fade-up">
+                Quaestione igitur per multiplices dilatata fortunas{" "}
+              </p>
+              <input type="text" placeholder="Nom" data-aos="fade-up" />
+              <input type="email" placeholder="mail" data-aos="fade-up" />
+              <input type="text" placeholder="message" data-aos="fade-up" />
 
-              <a href="#" className={style.button}>
+              <a href="#" className={style.button} data-aos="fade-up">
                 ENVOYER
               </a>
             </div>
@@ -226,18 +226,18 @@ export default function Home() {
           <div className={style.contact}>
             <div className={style.all}>
               <div className={style.adresse}>
-                <p>Adresse</p>
-                <p>30 Rue Berlioz</p>
-                <p>91240</p>
-                <p>Saint-Michel-sur-Orge</p>
+                <p data-aos="fade-up">Adresse</p>
+                <p data-aos="fade-up">30 Rue Berlioz</p>
+                <p data-aos="fade-up">91240</p>
+                <p data-aos="fade-up">Saint-Michel-sur-Orge</p>
               </div>
               <div className={style.numero}>
-                <p>Numero de telephone</p>
-                <p>+33641388123</p>
+                <p data-aos="fade-up">Numero de telephone</p>
+                <p data-aos="fade-up">+33641388123</p>
               </div>
               <div className={style.horraire}>
-                <p>Horraires</p>
-                <p>7J /7</p>
+                <p data-aos="fade-up">Horraires</p>
+                <p data-aos="fade-up">7J /7</p>
               </div>
             </div>
           </div>
