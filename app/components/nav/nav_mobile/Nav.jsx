@@ -30,8 +30,16 @@ const Nav = () => {
       <div className={style.hamburger}>
         <Hamburger toggled={isOpen} toggle={toggleMenu} />
       </div>
-      <div className={isOpen ? `${style.show}` : ""}>
-        {isOpen && <Hamburger toggled={isOpen} toggle={toggleMenu} />}
+      <div className={isOpen ? `${style.show}` : style.none}>
+        <div className={style.container_nav}>
+          <Hamburger toggled={isOpen} toggle={toggleMenu} />
+        </div>
+        <div className={style.container_links}>
+          <a href="#propo">A prpos</a>
+          <a href="#nosservices">Nos services</a>
+          <a href="#nosprix">Nos prix</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </nav>
   );

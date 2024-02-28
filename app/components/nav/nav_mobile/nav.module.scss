@@ -15,6 +15,28 @@
   left: 0;
 
   background-color: white;
+  .container_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    a {
+      padding: 10px;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .container_nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+}
+.none {
+  display: none;
 }
 .links {
   display: none;
