@@ -1,16 +1,11 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import style from "./nav.module.scss";
 import Hamburger from "hamburger-react";
+
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
-  // useEffect(() => {
-  //   // Initialise AOS uniquement côté client
-  //   if (process.browser) {
-  //     AOS.init();
-  //   }
-  // }, []);
+
   useEffect(() => {
     const body = document.querySelector("body");
     if (isOpen) {
@@ -28,18 +23,15 @@ const Nav = () => {
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
+
   return (
     <nav>
       <div className={style.hamburger}>
         <Hamburger toggled={isOpen} toggle={toggleMenu} />
       </div>
-      <div
-        className={`${style.container_links_hamburger} ${
-          isOpen ? style.show : ""
-        }`}
-        // data-aos="fade-left"
-      >
-        <div className={style.links}></div>
+      <div className={isOpen ? `${style.show}` : style.links}>
+        {/* Utilisez une condition ternaire pour inclure la classe `style.show` si isOpen est vrai */}
+        <Hamburger toggled={isOpen} toggle={toggleMenu} />
       </div>
     </nav>
   );

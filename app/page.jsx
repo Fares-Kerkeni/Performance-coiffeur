@@ -12,7 +12,7 @@ import dv from "./assets/dv.jpeg";
 import Nav_mobile from "./components/nav/nav_mobile/Nav";
 export default function Home() {
   return (
-    <>
+    <div className={style.alllll}>
       <Nav_mobile />
       <div className={style.container_header}>
         <div className={style.nav}>
@@ -243,6 +243,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
